@@ -2,14 +2,12 @@ import { useState } from 'react'
 import './App.css'
 import Checkbox from './Component/Checkbox/Checkbox'
 
-const colors = ['Green', 'Yellow', 'Red', 'Orange']
-
 function App() {
   const [checked, setChecked] = useState(false)
   const [checkedTwo, setCheckedTwo] = useState(false)
   const [checkedThree, setCheckedThree] = useState(false)
   const [checkedFour, setCheckedFour] = useState(false)
-  const [search, setSearch] = useState('')
+  // const [search, setSearch] = useState('')
 
   const handleChange = () => {
     setChecked(!checked)
