@@ -7,7 +7,7 @@ function App() {
   const [checkedTwo, setCheckedTwo] = useState(false)
   const [checkedThree, setCheckedThree] = useState(false)
   const [checkedFour, setCheckedFour] = useState(false)
-  // const [search, setSearch] = useState('')
+  const [search, setSearch] = useState('')
 
   const handleChange = () => {
     setChecked(!checked)
