@@ -37,25 +37,19 @@ function App() {
       <div className='header'>
         <p>Select Report assessment grade</p>
       </div>
-      <div>
-        <form>
-          <input type='text' placeholder='Search...' onChange={handleEvent} />
-        </form>
-      </div>
-      <div>
-        <Checkbox label='Green' value={checked} onChange={handleChange} />
-        <Checkbox
-          label='Yellow'
-          value={checkedTwo}
-          onChange={handleChangeTwo}
-        />
-        <Checkbox
-          label='Orange'
-          value={checkedThree}
-          onChange={handleChangeThree}
-        />
-        <Checkbox label='Red' value={checkedFour} onChange={handleChangeFour} />
-      </div>
+
+      <form>
+        <input type='text' placeholder='Search...' onChange={handleEvent} />
+      </form>
+
+      <Checkbox label='Green' value={checked} onChange={handleChange} />
+      <Checkbox label='Yellow' value={checkedTwo} onChange={handleChangeTwo} />
+      <Checkbox
+        label='Orange'
+        value={checkedThree}
+        onChange={handleChangeThree}
+      />
+      <Checkbox label='Red' value={checkedFour} onChange={handleChangeFour} />
     </div>
   )
 }
