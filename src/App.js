@@ -7,6 +7,7 @@ function App() {
   const [checkedTwo, setCheckedTwo] = useState(false)
   const [checkedThree, setCheckedThree] = useState(false)
   const [checkedFour, setCheckedFour] = useState(false)
+  // eslint-disable-next-line no-unused-vars
   const [search, setSearch] = useState('')
 
   const handleChange = () => {
@@ -38,6 +39,7 @@ function App() {
 
       <form>
         <input type='text' placeholder='Search...' onChange={handleEvent} />
+        {search}
       </form>
 
       <Checkbox label='Green' value={checked} onChange={handleChange} />
