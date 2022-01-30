@@ -1,7 +1,63 @@
+import { useState } from 'react'
 import './App.css'
+import Checkbox from './Component/Checkbox/Checkbox'
+
+const colors = ['Green', 'Yellow', 'Red', 'Orange']
 
 function App() {
-  return <div className='App'></div>
+  const [checked, setChecked] = useState(false)
+  const [checkedTwo, setCheckedTwo] = useState(false)
+  const [checkedThree, setCheckedThree] = useState(false)
+  const [checkedFour, setCheckedFour] = useState(false)
+  const [search, setSearch] = useState('')
+
+  const handleChange = () => {
+    setChecked(!checked)
+  }
+
+  const handleChangeTwo = () => {
+    setCheckedTwo(!checkedTwo)
+  }
+
+  const handleChangeThree = () => {
+    setCheckedThree(!checkedThree)
+  }
+
+  const handleChangeFour = () => {
+    setCheckedFour(!checkedFour)
+  }
+
+  const handleEvent = (e) => {
+    setSearch(e.target.value)
+    console.log(e.target.value)
+  }
+
+  return (
+    <div className='container'>
+      <div className='header'>
+        <p>Select Report assessment grade</p>
+      </div>
+      <div>
+        <form>
+          <input type='text' placeholder='Search...' onChange={handleEvent} />
+        </form>
+      </div>
+      <div>
+        <Checkbox label='Green' value={checked} onChange={handleChange} />
+        <Checkbox
+          label='Yellow'
+          value={checkedTwo}
+          onChange={handleChangeTwo}
+        />
+        <Checkbox
+          label='Orange'
+          value={checkedThree}
+          onChange={handleChangeThree}
+        />
+        <Checkbox label='Red' value={checkedFour} onChange={handleChangeFour} />
+      </div>
+    </div>
+  )
 }
 
 export default App
